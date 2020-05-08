@@ -6,7 +6,7 @@ const getTemp = require('./callback')
 
 
 const app = express() //express is like a method
-
+const port = process.env.port || 3000
 
 const pathdirectory = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -69,4 +69,4 @@ app.get('*',(req,res)=>{
       })
 })
 
-app.listen(3000)
+app.listen(port)
